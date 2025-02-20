@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["src/Wpm.Management.Api/Wpm.Management.Api.csproj", "src/Wpm.Management.Api/"]
 RUN dotnet restore "src/Wpm.Management.Api/Wpm.Management.Api.csproj"
 COPY . .
-WORKDIR "/src/Wpm.Management.Api"
+WORKDIR "/src/src/Wpm.Management.Api"
 RUN dotnet build "Wpm.Management.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
