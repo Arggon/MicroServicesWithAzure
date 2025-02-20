@@ -20,7 +20,8 @@ public class ManagementDbContext(DbContextOptions<ManagementDbContext> options) 
         modelBuilder.Entity<Pet>().HasData(
             new Pet { Id = 1, Name = "Fido", Age = 3, BreedId = 1 },
             new Pet { Id = 2, Name = "Whiskers", Age = 2, BreedId = 2 },
-            new Pet { Id = 3, Name = "Goldie", Age = 1, BreedId = 3 }
+            new Pet { Id = 3, Name = "Goldie", Age = 1, BreedId = 3 },
+            new Pet { Id = 4, Name = "Snoopy", Age = 50, BreedId = 1 }
         );
     }
 }
