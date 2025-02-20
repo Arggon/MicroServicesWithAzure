@@ -7,7 +7,7 @@ namespace Wpm.Clinic.Api.Controllers;
 [Route("api/[controller]")]
 public class ConsultationController(ClinicApplicationService applicationService) : ControllerBase
 {
-    [HttpPost("/start")]
+    [HttpPost("start")]
     public async Task<IActionResult> Start(StartConsultationCommand command)
     {
         var result = await applicationService.Handle(command);
