@@ -27,7 +27,7 @@ public class BreedsController(ManagementDbContext dbContext, ILogger<BreedsContr
         }
         catch (Exception e)
         {
-            logger.LogError(e, "Failed to get breed by id");
+            logger.LogError(e, "Failed to get breed by id.");
             return StatusCode(500);
         }
     }
