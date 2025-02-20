@@ -17,8 +17,8 @@ public class BreedsController(ManagementDbContext dbContext, ILogger<BreedsContr
         return Ok(breeds);
     }
 
-    [HttpGet("{id}", Name = nameof(GetById))]
-    public async Task<IActionResult> GetById(int id)
+    [HttpGet("{id}", Name = nameof(GetBreedsById))]
+    public async Task<IActionResult> GetBreedsById(int id)
     {
         try
         {
@@ -41,7 +41,7 @@ public class BreedsController(ManagementDbContext dbContext, ILogger<BreedsContr
             await dbContext.Breeds.AddAsync(breed);
             await dbContext.SaveChangesAsync();
 
-            return CreatedAtRoute(nameof(GetById), new { id = breed.Id }, newBreed);
+            return CreatedAtRoute(nameof(GetBreedsById), new { id = breed.Id }, newBreed);
         }
         catch (Exception ex)
         {
