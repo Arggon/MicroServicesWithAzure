@@ -1,0 +1,9 @@
+@WpmClinic_HostAddress = http://localhost:5246
+
+POST {{WpmClinic_HostAddress}}/api/consultation/start
+Content-Type: application/json
+
+{
+  "patientId": 1
+}
+###
